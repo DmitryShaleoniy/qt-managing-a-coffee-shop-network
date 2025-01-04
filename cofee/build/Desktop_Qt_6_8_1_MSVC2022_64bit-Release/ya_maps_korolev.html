@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Yandex Map</title>
+<meta charset="utf-8">
+<script src="https://api-maps.yandex.ru/2.1/?apikey=2482926a-5cf6-4e70-8bf1-c6f91b7d9562&lang=ru_RU"></script>
+<style>
+  html, body, #map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  ymaps.ready(init);
+  function init(){
+    var moscow = [55.915266, 37.805500]; //Королев
+    var myMap = new ymaps.Map("map", {
+        center: moscow,
+        zoom: 10,
+	type: 'yandex#hybrid'
+    });
+
+    var myPlacemark = new ymaps.Placemark(moscow, {
+        hintContent: 'Латешечка Королев',
+        balloonContent: 'Латешечка Королев'
+    });
+    myMap.geoObjects.add(myPlacemark);
+  }
+</script>
+</body>
+</html>

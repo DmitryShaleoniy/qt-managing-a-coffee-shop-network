@@ -13,15 +13,16 @@
 #include <QShortcut>
 #include <cafe_menagement.h>
 #include <QPalette>
+#include <QDir>
 
 AdminInterface::AdminInterface(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::AdminInterface)
 {
 
-    //QPalette m_pal;
-    //m_pal.setBrush(QPalette::Window, QBrush(QPixmap("./title.png")));
-    //this->setPalette(m_pal);
+    QPalette m_pal;
+    m_pal.setBrush(QPalette::Window, QBrush(QPixmap(QDir::currentPath() + "/title.png")));
+    this->setPalette(m_pal);
 
     ui->setupUi(this);
     // shortcut = new QShortcut(this);
@@ -106,4 +107,3 @@ void AdminInterface::on_cafe_menagement_button_clicked()
 {
     CafeMenagement.show();
 }
-

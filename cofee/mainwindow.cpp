@@ -8,6 +8,7 @@
 #include <QTableView>
 #include <QSqlRecord>
 #include <QSqlQuery>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,7 +17,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     QPalette m_pal;
-    //m_pal.setBrush(QPalette::Window, QBrush(QPixmap("./title.png")));
+    m_pal.setBrush(QPalette::Window, QBrush(QPixmap(QDir::currentPath() + "/title.png")));
+
     this->setPalette(m_pal);
 }
 
@@ -92,6 +94,7 @@ void MainWindow::on_log_in_button_clicked()
                     case Supplier: {
                         qDebug() << "Supplier role selected";
                         SupplierInterface.show();
+                        SupplierInterface.make_login(user_login, db);
                         this->close();
                         break;
                     };

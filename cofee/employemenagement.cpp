@@ -12,7 +12,7 @@ EmployeMenagement::EmployeMenagement(QWidget *parent)
     , ui(new Ui::EmployeMenagement)
     , model(new QSqlQueryModel(this))
 {
-    QWidget::setFixedSize(800, 220);
+    //QWidget::setFixedSize(800, 220);
 
     //QPalette m_pal;
     //m_pal.setBrush(QPalette::Window, QBrush(QPixmap("./title.png")));
@@ -52,7 +52,6 @@ void EmployeMenagement::on_worker_tables_doubleClicked(const QModelIndex &index)
     ui->dynamicLable->setText(name);
 }
 
-
 void EmployeMenagement::on_payment_button_clicked()
 {
     if(TimeChoice.exec() ==QDialog::Accepted){
@@ -76,8 +75,6 @@ void EmployeMenagement::on_payment_button_clicked()
     }
 }
 
-
-
 void EmployeMenagement::on_fire_worker_clicked()
 {
     model -> setQuery("DELETE FROM \"Cashier\" WHERE name = \'" + current_cafe + "\'", db);
@@ -85,7 +82,6 @@ void EmployeMenagement::on_fire_worker_clicked()
     ui->worker_tables->setModel(model);
     ui->worker_tables->horizontalHeader()->resizeSection(0, 256);
 }
-
 
 void EmployeMenagement::on_hire_worker_clicked()
 {

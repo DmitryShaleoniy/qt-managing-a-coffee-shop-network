@@ -74,7 +74,7 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Рассчет зарплаты за последний месяц</string>
+            <string>Рассчет зарплаты за промежуток времени</string>
            </property>
           </widget>
          </item>

@@ -18,5 +18,5 @@ void NewWorkerDialog::getparameters(QString &name, QString &login, QString &pass
     name = ui->nameEdit->text();
     login = ui->loginEdit->text();
     password = ui->passwordEdit->text();
-    dep = ui->depEdit->text();
+    dep = ui->depEdit->currentText();
 }

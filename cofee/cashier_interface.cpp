@@ -7,6 +7,8 @@
 #include <QSqlQuery>
 #include <qmessagebox.h>
 #include <QMessageBox>
+#include <QPalette>
+#include <QDir>
 
 cashier_interface::cashier_interface(QWidget *parent)
     : QWidget(parent)
@@ -14,6 +16,11 @@ cashier_interface::cashier_interface(QWidget *parent)
     , model(new QSqlQueryModel(this))
 {
     QWidget::setFixedSize(968, 568);
+
+    QPalette m_pal;
+    m_pal.setBrush(QPalette::Window, QBrush(QPixmap(QDir::currentPath() + "/title.png")));
+    this->setPalette(m_pal);
+
     ui->setupUi(this);
     ui->end_work_button->setEnabled(false);
 
@@ -53,7 +60,7 @@ void cashier_interface::makeLogin(QString login, QSqlDatabase m_db)
 {
     this->db = m_db;
     this->u_login = login;
-    ui->name_label->setText(login);
+    //ui->name_label->setText(login);
     QSqlQuery query(db);
 
     if (query.exec("SELECT name, department FROM \"Cashier\" WHERE login = \'" + u_login + "\'")) {
@@ -61,7 +68,8 @@ void cashier_interface::makeLogin(QString login, QSqlDatabase m_db)
         u_name = query.value(0).toString();
         u_dep = query.value(1).toString();
     }
-    ui->name_label->setText(u_dep);
+    ui->name_label->setText(u_name);
+    ui->dep_label->setText(u_dep);
 }
 
 void cashier_interface::on_start_work_button_clicked()
