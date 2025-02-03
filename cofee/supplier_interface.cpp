@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QDebug>
 #include <QPalette>
+#include <QPixmap>
 //#include <QSqlQuery>
 
 supplier_interface::supplier_interface(QWidget *parent)
@@ -11,7 +12,7 @@ supplier_interface::supplier_interface(QWidget *parent)
     , ui(new Ui::supplier_interface)
     , model(new QSqlQueryModel(this))
 {
-
+    QWidget::setFixedSize(860, 610);
     QPalette m_pal;
     m_pal.setBrush(QPalette::Window, QBrush(QPixmap(QDir::currentPath() + "/title.png")));
     this->setPalette(m_pal);
@@ -21,9 +22,15 @@ supplier_interface::supplier_interface(QWidget *parent)
     //ui->map_widget->load(QUrl("https://vkvideo.ru/video-52257710_456240348")); //http://www.youtube.com/embed/gUdHsp5rs5g?rel=0&start=0&autoplay=1
     //https://youtu.be/gUdHsp5rs5g?autoplay=1&mute=1
     //https://vkvideo.ru/video-52257710_456240348
-    dep="/default.html";
-    make_map(dep);
+    // dep="/default.html";
+    // make_map(dep);
+    //ui->map_widget->load(QUrl("https://www.artplast.ru/upload/medialibrary/bbc/pmoatfj3feeglmi5ev32fc0579cqr8qv.jpg"));
+    ui->stackedWidget->setCurrentWidget(ui->page_6);
+    QPixmap pm(QDir::currentPath() + "/cafe.jpg");
 
+    ui->label->setPixmap(pm);
+    ui->label->update();
+    ui->stackedWidget->update();
 }
 
 void supplier_interface::make_login(QString login, QSqlDatabase m_db)
@@ -53,6 +60,10 @@ void supplier_interface::on_delivery_button_clicked()
 
 void supplier_interface::on_department_comboBox_currentTextChanged(const QString &cafe)
 {
+    if(ui->stackedWidget->currentWidget()!=ui->page_5){
+        qDebug() << "current widget = page 5";
+        ui->stackedWidget->setCurrentWidget(ui->page_5);
+    }
     model -> setQuery("", db);
     qDebug() << cafe;
     if (cafe == "Lateshechka Solntsevo"){

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QSqlQueryModel>
 #include <QSpinBox>
+#include <QLabel>
 
 namespace Ui {
 class cashier_interface;
@@ -37,6 +38,7 @@ private:
     QString menu_names[10];
     int available[10];
     QSpinBox* boxes[10];
+    QLabel* pics[10];
 };
 
 #endif // CASHIER_INTERFACE_H

@@ -39,7 +39,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="latte_pic">
+  <widget class="QLabel" name="label_latte">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -50,9 +50,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/jjjjj/OneDrive/Рабочий стол/latte.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -102,7 +99,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="label_espresso">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -113,9 +110,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/jjjjj/OneDrive/Рабочий стол/f70ngi5m1xa7og3zwj8gl8eng35zhuf3.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -143,7 +137,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLabel" name="label_cappuccino">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -154,9 +148,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/jjjjj/OneDrive/Рабочий стол/mm3g8xelgoh943rtfj6i0i1l8d4q67f1.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -184,7 +175,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_7">
+  <widget class="QLabel" name="label_americano">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -195,9 +186,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/jjjjj/OneDrive/Рабочий стол/c50e2bc0274f4604434792652277ed4d.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -225,7 +213,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_9">
+  <widget class="QLabel" name="label_mocca">
    <property name="geometry">
     <rect>
      <x>770</x>
@@ -236,9 +224,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/jjjjj/OneDrive/Рабочий стол/mocha.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -266,7 +251,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_11">
+  <widget class="QLabel" name="label_flatwhite">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -277,9 +262,6 @@
    </property>
    <property name="text">
     <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>C:/Users/jjjjj/OneDrive/Рабочий стол/M_height.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
@@ -307,7 +289,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_13">
+  <widget class="QLabel" name="label_milk">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -392,7 +374,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_17">
+  <widget class="QLabel" name="label_bun">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -411,7 +393,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_18">
+  <widget class="QLabel" name="label_cookie">
    <property name="geometry">
     <rect>
      <x>580</x>
@@ -430,7 +412,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QLabel" name="label_19">
+  <widget class="QLabel" name="label_candy">
    <property name="geometry">
     <rect>
      <x>770</x>
@@ -468,7 +450,7 @@
     <string>Подтвердить заказ</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>40</x>

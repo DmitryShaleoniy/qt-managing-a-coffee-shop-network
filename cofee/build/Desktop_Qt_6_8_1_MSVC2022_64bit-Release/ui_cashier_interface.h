@@ -27,7 +27,7 @@ public:
     QVBoxLayout *verticalLayout;
     QPushButton *start_work_button;
     QPushButton *end_work_button;
-    QLabel *latte_pic;
+    QLabel *label_latte;
     QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -36,32 +36,32 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QSpinBox *latte;
-    QLabel *label_3;
+    QLabel *label_espresso;
     QWidget *layoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
     QLabel *label_4;
     QSpinBox *Cappuccino;
-    QLabel *label_5;
+    QLabel *label_cappuccino;
     QWidget *layoutWidget_4;
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_6;
     QSpinBox *Americano;
-    QLabel *label_7;
+    QLabel *label_americano;
     QWidget *layoutWidget_5;
     QHBoxLayout *horizontalLayout_5;
     QLabel *label_8;
     QSpinBox *Mocha;
-    QLabel *label_9;
+    QLabel *label_mocca;
     QWidget *layoutWidget_6;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_10;
     QSpinBox *Flat_white;
-    QLabel *label_11;
+    QLabel *label_flatwhite;
     QWidget *layoutWidget_7;
     QHBoxLayout *horizontalLayout_7;
     QLabel *label_12;
     QSpinBox *Milk;
-    QLabel *label_13;
+    QLabel *label_milk;
     QWidget *layoutWidget_8;
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_14;
@@ -74,11 +74,11 @@ public:
     QHBoxLayout *horizontalLayout_10;
     QLabel *label_16;
     QSpinBox *Candy;
-    QLabel *label_17;
-    QLabel *label_18;
-    QLabel *label_19;
+    QLabel *label_bun;
+    QLabel *label_cookie;
+    QLabel *label_candy;
     QPushButton *pushButton;
-    QWidget *widget;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_2;
     QLabel *name_label;
     QLabel *dep_label;
@@ -104,11 +104,10 @@ public:
 
         verticalLayout->addWidget(end_work_button);
 
-        latte_pic = new QLabel(cashier_interface);
-        latte_pic->setObjectName("latte_pic");
-        latte_pic->setGeometry(QRect(220, 150, 121, 101));
-        latte_pic->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/latte.jpg")));
-        latte_pic->setScaledContents(true);
+        label_latte = new QLabel(cashier_interface);
+        label_latte->setObjectName("label_latte");
+        label_latte->setGeometry(QRect(220, 150, 121, 101));
+        label_latte->setScaledContents(true);
         layoutWidget1 = new QWidget(cashier_interface);
         layoutWidget1->setObjectName("layoutWidget1");
         layoutWidget1->setGeometry(QRect(30, 260, 140, 37));
@@ -141,11 +140,10 @@ public:
 
         horizontalLayout_2->addWidget(latte);
 
-        label_3 = new QLabel(cashier_interface);
-        label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(40, 150, 121, 101));
-        label_3->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/f70ngi5m1xa7og3zwj8gl8eng35zhuf3.jpg")));
-        label_3->setScaledContents(true);
+        label_espresso = new QLabel(cashier_interface);
+        label_espresso->setObjectName("label_espresso");
+        label_espresso->setGeometry(QRect(40, 150, 121, 101));
+        label_espresso->setScaledContents(true);
         layoutWidget_3 = new QWidget(cashier_interface);
         layoutWidget_3->setObjectName("layoutWidget_3");
         layoutWidget_3->setGeometry(QRect(370, 260, 163, 37));
@@ -162,11 +160,10 @@ public:
 
         horizontalLayout_3->addWidget(Cappuccino);
 
-        label_5 = new QLabel(cashier_interface);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(390, 150, 121, 101));
-        label_5->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/mm3g8xelgoh943rtfj6i0i1l8d4q67f1.jpg")));
-        label_5->setScaledContents(true);
+        label_cappuccino = new QLabel(cashier_interface);
+        label_cappuccino->setObjectName("label_cappuccino");
+        label_cappuccino->setGeometry(QRect(390, 150, 121, 101));
+        label_cappuccino->setScaledContents(true);
         layoutWidget_4 = new QWidget(cashier_interface);
         layoutWidget_4->setObjectName("layoutWidget_4");
         layoutWidget_4->setGeometry(QRect(560, 260, 163, 37));
@@ -183,11 +180,10 @@ public:
 
         horizontalLayout_4->addWidget(Americano);
 
-        label_7 = new QLabel(cashier_interface);
-        label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(580, 150, 121, 101));
-        label_7->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/c50e2bc0274f4604434792652277ed4d.jpg")));
-        label_7->setScaledContents(true);
+        label_americano = new QLabel(cashier_interface);
+        label_americano->setObjectName("label_americano");
+        label_americano->setGeometry(QRect(580, 150, 121, 101));
+        label_americano->setScaledContents(true);
         layoutWidget_5 = new QWidget(cashier_interface);
         layoutWidget_5->setObjectName("layoutWidget_5");
         layoutWidget_5->setGeometry(QRect(750, 260, 163, 37));
@@ -204,11 +200,10 @@ public:
 
         horizontalLayout_5->addWidget(Mocha);
 
-        label_9 = new QLabel(cashier_interface);
-        label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(770, 150, 121, 101));
-        label_9->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/mocha.jpg")));
-        label_9->setScaledContents(true);
+        label_mocca = new QLabel(cashier_interface);
+        label_mocca->setObjectName("label_mocca");
+        label_mocca->setGeometry(QRect(770, 150, 121, 101));
+        label_mocca->setScaledContents(true);
         layoutWidget_6 = new QWidget(cashier_interface);
         layoutWidget_6->setObjectName("layoutWidget_6");
         layoutWidget_6->setGeometry(QRect(20, 420, 163, 37));
@@ -225,11 +220,10 @@ public:
 
         horizontalLayout_6->addWidget(Flat_white);
 
-        label_11 = new QLabel(cashier_interface);
-        label_11->setObjectName("label_11");
-        label_11->setGeometry(QRect(40, 310, 121, 101));
-        label_11->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/M_height.jpg")));
-        label_11->setScaledContents(true);
+        label_flatwhite = new QLabel(cashier_interface);
+        label_flatwhite->setObjectName("label_flatwhite");
+        label_flatwhite->setGeometry(QRect(40, 310, 121, 101));
+        label_flatwhite->setScaledContents(true);
         layoutWidget_7 = new QWidget(cashier_interface);
         layoutWidget_7->setObjectName("layoutWidget_7");
         layoutWidget_7->setGeometry(QRect(210, 420, 141, 37));
@@ -246,11 +240,11 @@ public:
 
         horizontalLayout_7->addWidget(Milk);
 
-        label_13 = new QLabel(cashier_interface);
-        label_13->setObjectName("label_13");
-        label_13->setGeometry(QRect(220, 310, 121, 101));
-        label_13->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/75c5269c6bbd0a7876ee1c7212a697b9bb387c9f_full.jpg")));
-        label_13->setScaledContents(true);
+        label_milk = new QLabel(cashier_interface);
+        label_milk->setObjectName("label_milk");
+        label_milk->setGeometry(QRect(220, 310, 121, 101));
+        label_milk->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/75c5269c6bbd0a7876ee1c7212a697b9bb387c9f_full.jpg")));
+        label_milk->setScaledContents(true);
         layoutWidget_8 = new QWidget(cashier_interface);
         layoutWidget_8->setObjectName("layoutWidget_8");
         layoutWidget_8->setGeometry(QRect(370, 420, 163, 37));
@@ -299,21 +293,21 @@ public:
 
         horizontalLayout_10->addWidget(Candy);
 
-        label_17 = new QLabel(cashier_interface);
-        label_17->setObjectName("label_17");
-        label_17->setGeometry(QRect(390, 310, 121, 101));
-        label_17->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/344918_391.jpg")));
-        label_17->setScaledContents(true);
-        label_18 = new QLabel(cashier_interface);
-        label_18->setObjectName("label_18");
-        label_18->setGeometry(QRect(580, 310, 121, 101));
-        label_18->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/x1066163-1139358738.png")));
-        label_18->setScaledContents(true);
-        label_19 = new QLabel(cashier_interface);
-        label_19->setObjectName("label_19");
-        label_19->setGeometry(QRect(770, 310, 121, 101));
-        label_19->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/1608998078_6258.jpg")));
-        label_19->setScaledContents(true);
+        label_bun = new QLabel(cashier_interface);
+        label_bun->setObjectName("label_bun");
+        label_bun->setGeometry(QRect(390, 310, 121, 101));
+        label_bun->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/344918_391.jpg")));
+        label_bun->setScaledContents(true);
+        label_cookie = new QLabel(cashier_interface);
+        label_cookie->setObjectName("label_cookie");
+        label_cookie->setGeometry(QRect(580, 310, 121, 101));
+        label_cookie->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/x1066163-1139358738.png")));
+        label_cookie->setScaledContents(true);
+        label_candy = new QLabel(cashier_interface);
+        label_candy->setObjectName("label_candy");
+        label_candy->setGeometry(QRect(770, 310, 121, 101));
+        label_candy->setPixmap(QPixmap(QString::fromUtf8("C:/Users/jjjjj/OneDrive/\320\240\320\260\320\261\320\276\321\207\320\270\320\271 \321\201\321\202\320\276\320\273/1608998078_6258.jpg")));
+        label_candy->setScaledContents(true);
         pushButton = new QPushButton(cashier_interface);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(740, 490, 191, 35));
@@ -322,18 +316,18 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
-        widget = new QWidget(cashier_interface);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(40, 20, 291, 59));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget2 = new QWidget(cashier_interface);
+        layoutWidget2->setObjectName("layoutWidget2");
+        layoutWidget2->setGeometry(QRect(40, 20, 291, 59));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget2);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        name_label = new QLabel(widget);
+        name_label = new QLabel(layoutWidget2);
         name_label->setObjectName("name_label");
 
         verticalLayout_2->addWidget(name_label);
 
-        dep_label = new QLabel(widget);
+        dep_label = new QLabel(layoutWidget2);
         dep_label->setObjectName("dep_label");
 
         verticalLayout_2->addWidget(dep_label);
@@ -349,26 +343,26 @@ public:
         cashier_interface->setWindowTitle(QCoreApplication::translate("cashier_interface", "Form", nullptr));
         start_work_button->setText(QCoreApplication::translate("cashier_interface", "\320\235\320\260\321\207\320\260\321\202\321\214 \321\201\320\274\320\265\320\275\321\203", nullptr));
         end_work_button->setText(QCoreApplication::translate("cashier_interface", "\320\227\320\260\320\272\320\276\320\275\321\207\320\270\321\202\321\214 \321\201\320\274\320\265\320\275\321\203", nullptr));
-        latte_pic->setText(QString());
+        label_latte->setText(QString());
         label->setText(QCoreApplication::translate("cashier_interface", "Espresso", nullptr));
         label_2->setText(QCoreApplication::translate("cashier_interface", "Latte", nullptr));
-        label_3->setText(QString());
+        label_espresso->setText(QString());
         label_4->setText(QCoreApplication::translate("cashier_interface", "Cappuccino", nullptr));
-        label_5->setText(QString());
+        label_cappuccino->setText(QString());
         label_6->setText(QCoreApplication::translate("cashier_interface", "Americano", nullptr));
-        label_7->setText(QString());
+        label_americano->setText(QString());
         label_8->setText(QCoreApplication::translate("cashier_interface", "Mocca", nullptr));
-        label_9->setText(QString());
+        label_mocca->setText(QString());
         label_10->setText(QCoreApplication::translate("cashier_interface", "Flat white", nullptr));
-        label_11->setText(QString());
+        label_flatwhite->setText(QString());
         label_12->setText(QCoreApplication::translate("cashier_interface", "Milk", nullptr));
-        label_13->setText(QString());
+        label_milk->setText(QString());
         label_14->setText(QCoreApplication::translate("cashier_interface", "Bun", nullptr));
         label_15->setText(QCoreApplication::translate("cashier_interface", "Cookie", nullptr));
         label_16->setText(QCoreApplication::translate("cashier_interface", "Candy", nullptr));
-        label_17->setText(QString());
-        label_18->setText(QString());
-        label_19->setText(QString());
+        label_bun->setText(QString());
+        label_cookie->setText(QString());
+        label_candy->setText(QString());
         pushButton->setText(QCoreApplication::translate("cashier_interface", "\320\237\320\276\320\264\321\202\320\262\320\265\321\200\320\264\320\270\321\202\321\214 \320\267\320\260\320\272\320\260\320\267", nullptr));
         name_label->setText(QString());
         dep_label->setText(QString());

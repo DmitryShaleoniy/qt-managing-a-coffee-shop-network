@@ -9,6 +9,7 @@
 #include <QMessageBox>
 #include <QPalette>
 #include <QDir>
+#include <QPixmap>
 
 cashier_interface::cashier_interface(QWidget *parent)
     : QWidget(parent)
@@ -35,14 +36,32 @@ cashier_interface::cashier_interface(QWidget *parent)
     boxes[4] = (ui->Cookie     );
     boxes[2] = (ui->Candy      );
 
+    pics[0] = (ui->label_espresso  );
+    pics[1] = (ui->label_latte     );
+    pics[2] = (ui->label_cappuccino);
+    pics[3] = (ui->label_americano );
+    pics[4] = (ui->label_mocca     );
+    pics[5] = (ui->label_flatwhite);
+    pics[6] = (ui->label_milk      );
+    pics[7] = (ui->label_bun       );
+    pics[8] = (ui->label_cookie    );
+    pics[9] = (ui->label_candy     );
+
     QSqlQuery query(db);
     QString current_query = "SELECT name FROM menu ORDER BY name";
+    QString pix_path;
     query.exec(current_query);
     query.first();
 
     for(int i = 0; i < 10; i++) {
         menu_names[i] = query.value(0).toString();
         query.next();
+
+        pix_path = QDir::currentPath() + "/cashier_products_pics/pic_"+ QString::number(i)+ ".jpg";
+
+        QPixmap* pixmap = new QPixmap(pix_path);
+        pics[i]->setPixmap(*pixmap);
+        delete pixmap;
     }
 }
 
@@ -193,7 +212,6 @@ void cashier_interface::on_pushButton_clicked()
                         }
                     }
                     boxes[j]->setValue(0);
-
                 }
             }
         }

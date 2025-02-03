@@ -18,6 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -34,7 +35,11 @@ public:
     QVBoxLayout *verticalLayout;
     QTableView *tableView;
     QPushButton *delivery_button;
+    QStackedWidget *stackedWidget;
+    QWidget *page_5;
     QWebEngineView *map_widget;
+    QWidget *page_6;
+    QLabel *label;
 
     void setupUi(QWidget *supplier_interface)
     {
@@ -79,21 +84,38 @@ public:
 
         horizontalLayout->addLayout(verticalLayout);
 
-        map_widget = new QWebEngineView(supplier_interface);
+        stackedWidget = new QStackedWidget(supplier_interface);
+        stackedWidget->setObjectName("stackedWidget");
+        page_5 = new QWidget();
+        page_5->setObjectName("page_5");
+        map_widget = new QWebEngineView(page_5);
         map_widget->setObjectName("map_widget");
-        QSizePolicy sizePolicy1(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+        map_widget->setGeometry(QRect(0, 10, 401, 481));
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Fixed, QSizePolicy::Policy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(map_widget->sizePolicy().hasHeightForWidth());
         map_widget->setSizePolicy(sizePolicy1);
+        stackedWidget->addWidget(page_5);
+        page_6 = new QWidget();
+        page_6->setObjectName("page_6");
+        label = new QLabel(page_6);
+        label->setObjectName("label");
+        label->setGeometry(QRect(0, 10, 401, 491));
+        stackedWidget->addWidget(page_6);
 
-        horizontalLayout->addWidget(map_widget);
+        horizontalLayout->addWidget(stackedWidget);
 
+        horizontalLayout->setStretch(0, 2);
+        horizontalLayout->setStretch(1, 2);
 
         gridLayout->addLayout(horizontalLayout, 2, 0, 1, 1);
 
 
         retranslateUi(supplier_interface);
+
+        stackedWidget->setCurrentIndex(1);
+
 
         QMetaObject::connectSlotsByName(supplier_interface);
     } // setupUi
@@ -108,6 +130,7 @@ public:
         department_comboBox->setItemText(3, QCoreApplication::translate("supplier_interface", "Lateshechka Pervomayskaya", nullptr));
 
         delivery_button->setText(QCoreApplication::translate("supplier_interface", "\320\237\320\276\320\264\321\202\320\262\320\265\321\200\320\264\320\270\321\202\321\214 \320\224\320\276\321\201\321\202\320\260\320\262\320\272\321\203", nullptr));
+        label->setText(QCoreApplication::translate("supplier_interface", "frfgrg", nullptr));
     } // retranslateUi
 
 };

@@ -46,7 +46,7 @@
     </widget>
    </item>
    <item row="2" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,2">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -69,13 +69,43 @@
       </layout>
      </item>
      <item>
-      <widget class="QWebEngineView" name="map_widget" native="true">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
+      <widget class="QStackedWidget" name="stackedWidget">
+       <property name="currentIndex">
+        <number>1</number>
        </property>
+       <widget class="QWidget" name="page_5">
+        <widget class="QWebEngineView" name="map_widget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>401</width>
+           <height>481</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="page_6">
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>401</width>
+           <height>491</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>frfgrg</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
      </item>
     </layout>
