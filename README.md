@@ -35,3 +35,7 @@ The database includes 11 tables:
 The administrator interface includes full access to the database, as well as encapsulated functions for managing coffee shops (calculation of profit (for all time, for a period), opening/closing of coffee shops), employees (dismissal/hiring, calculation of salaries).
 The cashier interface is a cash register. Before adding a product to an order, a check is made to ensure that the required number of products are available in the warehouse of a specific coffee shop to which the cashier is assigned.
 The supplier's interface includes information about the missing products in each coffee shop, as well as a map that shows where the selected coffee shop is located.
+
+![](images/s1.png)
+![](images/s2.png)
+![](images/s3.png)
